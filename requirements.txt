@@ -1,0 +1,8 @@
+flask
+flask-cors
+textblob
+vaderSentiment
+scikit-learn
+pandas
+numpy
+notebook
