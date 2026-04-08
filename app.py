@@ -4,6 +4,14 @@ import pickle
 import os
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import nltk
+
+# Ensure required NLTK data for TextBlob is available
+try:
+    nltk.download('punkt', quiet=True)
+    nltk.download('brown', quiet=True)
+except Exception as e:
+    print(f"NLTK download warning: {e}")
 
 app = Flask(__name__)
 # Allow CORS for common local development ports
